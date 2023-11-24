@@ -4,7 +4,7 @@ from pathlib import Path
 import networkx as nx
 import string
 
-DATA_PATH = Path("data/")
+DATA_PATH = Path("12/data/")
 
 with (DATA_PATH / "input.txt").open() as infile:
     data = infile.read()
@@ -68,7 +68,14 @@ for row_id, row in enumerate(data):
 
 #%%
 
-# nx.draw(graph, with_labels = True)
+# nx.draw(graph, with_labels=True)
+
+#%%
+
+data = {}
+for node in graph.nodes:
+    data[node] = {}
+
 
 
 # %%
